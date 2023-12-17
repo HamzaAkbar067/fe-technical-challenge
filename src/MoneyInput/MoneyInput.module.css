@@ -1,0 +1,41 @@
+.moneyInput {
+   padding: 8px;
+   border: 1px solid var(--betterplace-color-gray-400);
+   border-radius: 4px;
+}
+/* Focus functionality is not available for Disabled input field, so i use active instead. `.moneyInput:disabled:focus` is not working */
+.moneyInput:focus,
+.moneyInput:disabled:active,
+.moneyInput:disabled:focus {
+   outline: var(--betterplace-color-green-700) solid 1px;
+   outline-offset: 2px;
+   box-shadow: unset !important;
+}
+.moneyInput::placeholder {
+   color: var(--betterplace-color-darkness);
+}
+.moneyInput:hover {
+   box-shadow: 0 0 5px 0 var(--betterplace-color-gray-400);
+}
+.moneyInput.error {
+   border-color: var(--betterplace-color-red-600);
+}
+.moneyInput.error:hover {
+  box-shadow: unset !important;
+}
+.errorText {
+   color: var(--betterplace-color-red-600);
+   margin-top: 8px;
+   margin-bottom: 0;
+}
+.label {
+   display: block;
+   margin-bottom: 8px;
+   font-weight: var(--betterplace-font-weights-bold);
+}
+.defaultForm {
+   padding: 5px;
+   width: max-content;
+   border-radius: 4px;
+   border: 1px dashed var(--betterplace-color-blue-dark);
+}
